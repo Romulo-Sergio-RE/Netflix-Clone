@@ -15,10 +15,10 @@ export const Header = () =>{
                 />
                 <ul className="lista">
                     <li className="lista-itens">inicio</li>
-                    <li className="lista-itens">amigos</li>
                     <li className="lista-itens">serie</li>
                     <li className="lista-itens">filmes</li>
-                    <li className="lista-itens">documentarios</li>
+                    <li className="lista-itens">bombando</li>
+                    <li className="lista-itens">Minha lista</li>
                 </ul>
                 <div className="teste">
                     <InputSearch />
