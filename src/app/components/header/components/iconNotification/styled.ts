@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
 export const ContainerNotification = styled.div`
+    margin: 0 0.313rem;
+    cursor: pointer;
     .icon-bell{
-        width: 30px;
-        height: 30px;
-        background-color: red;
+        width: 1.875rem;
+        height: 1.875rem;
     }
     .notification{
         position: fixed;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 16px;
-        height: 16px;
-        border-radius: 10px;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 0.625rem;
         background-color: red;
         position: absolute;
-        margin: 0 0 0 15px;
-        cursor: default;
+        margin: 0 0 0 0.938rem;
         color: #ffffff;
-        font-size: 16px;
+        font-size: 1rem;
     }
 `;

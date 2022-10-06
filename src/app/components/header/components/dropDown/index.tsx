@@ -8,28 +8,18 @@ export const DropDown = ()=>{
 
     return(
         <ContainerMenu>
-            <div className="menu">
-
-                <button
-                    onClick={()=>{setActive(!isActive)}}
-                    className="btn-user"
-                >
-                <IoMdArrowDropdown />
-                </button>
-                {isActive?(
-                    <div 
-                        className="menu-nav"    
-                    >
-                        <ul className="menu-lista">
-                            <li className="menu-itens">Home</li>
-                            <li className="menu-itens">Favoritos</li>
-                            <li className="menu-itens">Configuracoes</li>
-                            <li className="menu-itens">Sair</li>
-                        </ul>
-                    </div>
-                    ):null
-                }
+        <div className="dropdown">
+            <button className="btn">
+                Dropdown
+            </button>
+            <div className="dropdown-content">
+                <a href="#">Perfil</a>
+                <a href="#">Series</a>
+                <a href="#">Movies</a>
+                <a href="#">Settings</a>
+                <a href="#">Exit</a>
             </div>
+        </div>
         </ContainerMenu>
     )
 }
