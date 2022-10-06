@@ -3,10 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
     html{
       font-size: 16px;
-      font-family:Roboto;
     }
     body{
-      background: #FFFFFFFF;
+      background: rgba(32, 29, 29, 1);
     }
     *{
       margin: 0;

@@ -1,16 +1,12 @@
-import React, { useContext} from 'react';
+import React from 'react';
 import { Header } from './components/header';
-import { MovieContext } from './context/movieContext';
-import { TvShowsContext } from './context/tvShowsContext';
-import { getMovieAndTvShows } from './hooks/movieAndTv';
+import { Home } from './page/homePage';
 
 function App() {
-  const {popularMovie,topMovie} = useContext(MovieContext)
-  console.log(popularMovie)
   return (
-    <div>
-
-    </div>
+    <>
+        <Home />
+    </>
   );
 }
 
