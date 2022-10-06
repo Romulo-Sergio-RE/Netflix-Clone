@@ -9,12 +9,14 @@ export const IconNotification = ()=>{
         "amarelo",
     ]
     return(
-        <ContainerNotification>
+        <ContainerNotification onClick={()=>{alert("asds")}}>
             <div
                 className="notification"
             >{notification.length}</div>
-            <FaRegBell 
+            <img 
+                src={require("../../../../assets/Notification.png")}
                 className="icon-bell"
+                alt="icon-notification"
             />
         </ContainerNotification>
     )
