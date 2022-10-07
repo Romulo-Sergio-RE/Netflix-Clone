@@ -4,14 +4,20 @@ export const ContainerMenu = styled.div`
     .dropdown {
         float: left;
         overflow: hidden;
+        padding: 0 2.5rem 0 0 ;
     }
-    .dropdown .btn {
-        font-size: 1rem;
+    .profile-avatar{
+        width: 2.188rem;
+        height: 2.188rem;
+        border-radius: 0.313rem;
+    }
+    .dropdown .icon-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: none;
         outline: none;
         color: white;
-        padding: 0.875rem 1rem;
-        background-color: red; 
         margin: 0; 
     }
 
@@ -22,21 +28,27 @@ export const ContainerMenu = styled.div`
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
+        background-color: #000000;
         min-width: 6.563rem;
         box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
         z-index: 2;
+        border-radius:0.75rem;
     }
-    .dropdown-content a {
+    .dropdown-content .link{
         float: none;
-        color: black;
         padding: 0.75rem 1rem;
         text-decoration: none;
         display: block;
         text-align: center;
+        color: #FFFFFF;
+        border-radius:0.75rem;
+    }
+    .link{
+
+        color: #FFFFFF;
     }
     .dropdown-content a:hover {
-        background-color: #ddd;
+        background-color: red;
     }
     .dropdown:hover .dropdown-content {
         display: block;

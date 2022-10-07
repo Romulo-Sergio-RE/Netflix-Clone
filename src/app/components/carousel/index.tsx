@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Modal } from '../modal';
+import { useState } from 'react';
 
 interface carouselProps {
     dataMovieAndTvShows: any[]
@@ -21,11 +23,12 @@ export const Carousel: React.FC<carouselProps> = (props) =>{
                 <SwiperSlide>
                     <Card 
                         key={movie.id}
-                        imagePoster={movie.poster_path}
                         title={movie.title}
-                        synopsis={movie.vote_average}
-                        rating={movie.overview}
+                        imagePoster={movie.poster_path}
+                        overview={movie.overview}
+                        vote_average={movie.vote_average}
                         typeCard={typeCard}
+                        media_type={movie.media_type}
                     />
                 </SwiperSlide>
             )

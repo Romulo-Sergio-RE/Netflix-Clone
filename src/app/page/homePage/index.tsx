@@ -11,16 +11,28 @@ export const Home = () =>{
 
     const {popularMovie,topMovie} = useContext(MovieContext)
     const {popularTvShows,topTvShows} = useContext(TvShowsContext)
-    const {dayTrending,weekTrending} = useContext(TrendingContext)
-
+    const {weekTrending} = useContext(TrendingContext)
+    console.log(popularMovie)
     return(
         <ContainerHomePage>
             <Header />
+            <h3>week</h3>
+            <Carousel 
+                dataMovieAndTvShows={weekTrending} 
+                typeCard={"bigCard"} 
+                slidesPerView={6}
+            />
             <h3>Popular Movie</h3>
             <Carousel 
                 dataMovieAndTvShows={popularMovie} 
-                typeCard={"bigCard"} 
-                slidesPerView={6}
+                typeCard={""} 
+                slidesPerView={8}
+            />
+            <h3>Popular Tv shows</h3>
+            <Carousel 
+                dataMovieAndTvShows={popularTvShows} 
+                typeCard={""} 
+                slidesPerView={8}
             />
             <h3>Top Movie</h3>
             <Carousel 
@@ -28,27 +40,10 @@ export const Home = () =>{
                 typeCard={""}
                 slidesPerView={8}
             />
-            <h3>Top Popular</h3>
-            <Carousel 
-                dataMovieAndTvShows={popularTvShows} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
+
             <h3>Top Tv shows</h3>
             <Carousel 
                 dataMovieAndTvShows={topTvShows} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
-            <h3>day</h3>
-            <Carousel 
-                dataMovieAndTvShows={dayTrending} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
-            <h3>week</h3>
-            <Carousel 
-                dataMovieAndTvShows={weekTrending} 
                 typeCard={""} 
                 slidesPerView={8}
             />

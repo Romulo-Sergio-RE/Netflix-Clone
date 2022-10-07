@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerHeader = styled.div`
     width: 100%;
     height: 5rem;
-    background-color: black;
+    background-color: #000000;
     .container-nav{
         display: flex;
         align-items: center;
@@ -14,7 +14,7 @@ export const ContainerHeader = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 37.5rem;
+        width: 31.25rem;
     }
     .logo{
         width: 5.625rem;

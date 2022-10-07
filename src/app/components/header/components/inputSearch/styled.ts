@@ -8,7 +8,7 @@ export const ContainerInput = styled.div`
     .container-icon{
         width: 2.5rem;
         height: 2.5rem;
-        background-color: #ffffff;
+        background-color: red;
         border-radius: 1.875rem;
         display: flex;
         align-items: center;
@@ -19,7 +19,7 @@ export const ContainerInput = styled.div`
     .icon-menu{
         width: 1.875rem;
         height: 1.875rem;
-        color: #000000;
+        color: #ffffff;
     }
     .input-search{
         width: 12.5rem;
@@ -27,7 +27,7 @@ export const ContainerInput = styled.div`
         position: absolute;
         right: 14.375rem;
         border-radius: 0.75rem;
-        border: 0.188rem solid red;
+        border: 0.063rem solid red;
         padding: 0 0 0 0.625rem;
         :focus{
             outline: none;

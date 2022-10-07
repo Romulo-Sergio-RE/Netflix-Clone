@@ -26,9 +26,6 @@ export const Header = () =>{
                             <Link className="link" to={"/movie"}>Movie</Link>
                         </li>
                         <li className="lista-itens">
-                            <Link className="link" to={"/toptrending"}>Top Trending</Link>
-                        </li>
-                        <li className="lista-itens">
                             <Link className="link" to={"/mylist"}>My List</Link>
                         </li>
                     </ul>
