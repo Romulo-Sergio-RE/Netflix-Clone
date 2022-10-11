@@ -13,7 +13,8 @@ export const Home = () =>{
     const {popularMovie,topMovie,movieChosen} = useContext(MovieContext)
     const {popularTvShows,topTvShows} = useContext(TvShowsContext)
     const {weekTrending} = useContext(TrendingContext)
-    console.log(movieChosen)
+    
+    console.log(weekTrending)
     return(
         <ContainerHomePage>
             <Header />
@@ -25,74 +26,29 @@ export const Home = () =>{
             />
             <h3>week</h3>
             <Carousel 
-                dataMovieAndTvShows={weekTrending} 
-                typeCard={"bigCard"} 
+                dataMovieAndTvShows={weekTrending}  
                 slidesPerView={6}
             />
-            <h3>Popular Movie</h3>
+            <h3>Top movie</h3>
             <Carousel 
-                dataMovieAndTvShows={popularMovie} 
-                typeCard={""} 
-                slidesPerView={8}
+                dataMovieAndTvShows={topMovie}  
+                slidesPerView={6}
             />
-            <h3>Popular Tv shows</h3>
-            <Carousel 
-                dataMovieAndTvShows={popularTvShows} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
-            <h3>Top Movie</h3>
-            <Carousel 
-                dataMovieAndTvShows={topMovie} 
-                typeCard={""}
-                slidesPerView={8}
-            />
-
-            <h3>Top Tv shows</h3>
+            <h3>Top Tv Shows</h3>
             <Carousel 
                 dataMovieAndTvShows={topTvShows} 
-                typeCard={""} 
-                slidesPerView={8}
+                slidesPerView={6}
+            />
+            <h3>popular movie</h3>
+            <Carousel 
+                dataMovieAndTvShows={popularMovie} 
+                slidesPerView={6}
+            />
+            <h3>popular Tv Shows</h3>
+            <Carousel 
+                dataMovieAndTvShows={popularTvShows} 
+                slidesPerView={6}
             />
         </ContainerHomePage>
     )
 }
-/*
-            <h3>Popular Movie</h3>
-            <Carousel 
-                dataMovieAndTvShows={popularMovie} 
-                typeCard={"bigCard"} 
-                slidesPerView={6}
-            />
-            <h3>Top Movie</h3>
-            <Carousel 
-                dataMovieAndTvShows={topMovie} 
-                typeCard={""}
-                slidesPerView={8}
-            />
-            <h3>Top Popular</h3>
-            <Carousel 
-                dataMovieAndTvShows={popularTvShows} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
-            <h3>Top Tv shows</h3>
-            <Carousel 
-                dataMovieAndTvShows={topTvShows} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
-            <h3>day</h3>
-            <Carousel 
-                dataMovieAndTvShows={dayTrending} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
-            <h3>week</h3>
-            <Carousel 
-                dataMovieAndTvShows={weekTrending} 
-                typeCard={""} 
-                slidesPerView={8}
-            />
-
-*/

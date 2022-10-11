@@ -17,19 +17,16 @@ export const TvShowsPage = ()=>{
             <Carousel 
                 dataMovieAndTvShows={filterTvShows}
                 slidesPerView={6}
-                typeCard={"bigCard"}
             />
             <h3>Top Tv Shows </h3>
             <Carousel 
                 dataMovieAndTvShows={topTvShows}
-                slidesPerView={8}
-                typeCard={""}
+                slidesPerView={6}
             />
             <h3>Popular Tv Shows</h3>
             <Carousel 
                 dataMovieAndTvShows={popularTvShows}
-                slidesPerView={8}
-                typeCard={""}
+                slidesPerView={6}
             />
         </ContainerTvShows>
     )

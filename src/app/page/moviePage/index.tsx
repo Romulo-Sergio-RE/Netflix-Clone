@@ -19,19 +19,16 @@ export const MoviePage = ()=>{
             <Carousel 
                 dataMovieAndTvShows={filterMovie}
                 slidesPerView={6}
-                typeCard={"bigCard"}
             />
             <h3>Top Movie </h3>
             <Carousel 
                 dataMovieAndTvShows={topMovie}
-                slidesPerView={8}
-                typeCard={""}
+                slidesPerView={6}
             />
             <h3>Popular Movie</h3>
             <Carousel 
                 dataMovieAndTvShows={popularMovie}
-                slidesPerView={8}
-                typeCard={""}
+                slidesPerView={6}
             />
         </ContainerMovie>
     )

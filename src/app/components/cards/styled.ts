@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const ContainerCard = styled.div`
     .poster-big-movie{
-        width: 12.5rem;
-        height: 18.75rem;
-        transition: all 2s;
+        width: 200px;
+        height: 250px;
         border-radius: 0.938rem;
         cursor: pointer;
         box-shadow: 0.063rem 0 0.625rem rgba(255, 255, 255, 0.2);
+        transition: all 2s;
         :hover{
             transform: scale(1.08);
         }
