@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 
 import { MovieContext } from "../../context/movieContext"
 import { TrendingContext } from "../../context/trendingContext"
@@ -6,16 +6,23 @@ import { TvShowsContext } from "../../context/tvShowsContext"
 import { ContainerHomePage } from "./styled"
 import { Carousel } from "../../components/carousel";
 import { Header } from "../../components/header"
+import { Banner } from "../../components/banner"
 
 export const Home = () =>{
 
-    const {popularMovie,topMovie} = useContext(MovieContext)
+    const {popularMovie,topMovie,movieChosen} = useContext(MovieContext)
     const {popularTvShows,topTvShows} = useContext(TvShowsContext)
     const {weekTrending} = useContext(TrendingContext)
-    console.log(popularMovie)
+    console.log(movieChosen)
     return(
         <ContainerHomePage>
             <Header />
+            <Banner 
+                title={movieChosen?.title}
+                overview={movieChosen?.overview}
+                vote_average={movieChosen?.vote_average}
+                backdrop_path={movieChosen?.backdrop_path}
+            />
             <h3>week</h3>
             <Carousel 
                 dataMovieAndTvShows={weekTrending} 

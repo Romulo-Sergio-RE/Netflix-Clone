@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ContainerHeader = styled.div`
     width: 100%;
-    height: 5rem;
-    background-color: #000000;
+    height: 4.2rem;
+    background-color: rgba(8, 8, 8, 1);
     .container-nav{
         display: flex;
         align-items: center;
