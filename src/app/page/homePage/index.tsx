@@ -14,7 +14,6 @@ export const Home = () =>{
     const {popularTvShows,topTvShows} = useContext(TvShowsContext)
     const {weekTrending} = useContext(TrendingContext)
     
-    console.log(weekTrending)
     return(
         <ContainerHomePage>
             <Header />

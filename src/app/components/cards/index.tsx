@@ -8,25 +8,29 @@ interface cardProps {
     title: string,
     name: string,
     overview: string,
-    vote_average: number
+    vote_average: string
     media_type: string
+
 }
 export const Card: React.FC<cardProps> = (props)=>{
     const image_path = "https://image.tmdb.org/t/p/w500";
-    const [isModalOpen,setModalOpen] = useState(false)
-
+    const [isModalOpen, setModalOpen] = useState(false)
+    
     return(
         <>
         {isModalOpen?
             <Modal 
                 title={props.title}
                 name={props.name}
-                onClose={()=>{setModalOpen(false)}}
+                poster_path={props.imagePoster}
+                overview={props.overview}
+                vote_average={props.vote_average}
+                onClose={()=>{setModalOpen(!isModalOpen)}}
             />
             :null
         }
             <ContainerCard>
-                <div onClick={()=>{setModalOpen(true)}}>
+                <div onClick={() => setModalOpen(!isModalOpen)}>
                     <img 
                         src={`${image_path}${props.imagePoster}`} 
                         alt="movieImage"

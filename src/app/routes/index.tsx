@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { FavoritesProvider } from "../context/favoritesContext"
 import { MovieProvider } from "../context/movieContext"
 import { TrendingProvider } from "../context/trendingContext"
 import { TvShowsProvider } from "../context/tvShowsContext"
@@ -13,12 +14,14 @@ export const RoutesPage = ()=>{
         <MovieProvider>
          <TvShowsProvider>
           <TrendingProvider>
-            <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/tvshows" element={<TvShowsPage />}/>
-                <Route path="/movie" element={<MoviePage />}/>
-                <Route path="/mylist" element={<Favorites />}/>
-            </Routes>
+            <FavoritesProvider>
+              <Routes>
+                  <Route path="/" element={<Home />}/>
+                  <Route path="/tvshows" element={<TvShowsPage />}/>
+                  <Route path="/movie" element={<MoviePage />}/>
+                  <Route path="/mylist" element={<Favorites />}/>
+              </Routes>
+            </FavoritesProvider>
           </TrendingProvider>
          </TvShowsProvider>
         </MovieProvider>
