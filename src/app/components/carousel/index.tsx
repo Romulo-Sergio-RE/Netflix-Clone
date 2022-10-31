@@ -34,6 +34,7 @@ export const Carousel: React.FC<carouselProps> = (props) =>{
                                     vote_average={movie.vote_average}
                                     media_type={movie.media_type}
                                     name={movie.name}
+                                    backImage={movie.backdrop_path}
                                 />
                             </SwiperSlide>
                         )

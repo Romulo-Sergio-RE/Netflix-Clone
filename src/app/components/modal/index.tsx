@@ -9,6 +9,7 @@ interface ModalProps {
     name?: string
     vote_average: string
     overview: string
+    backImage:string
     onClose?: ()=> void,
 }
 export const Modal: React.FC<ModalProps> = (props)=>{
@@ -27,8 +28,6 @@ export const Modal: React.FC<ModalProps> = (props)=>{
             setFavorites([...favorites, props])
         }
     }
-
-    console.log(favorites.filter((favorite)=> favorite.poster_path !== props.poster_path))
     return(
         <ContainerModal>
             <Container>
