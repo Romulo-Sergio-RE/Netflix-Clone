@@ -13,6 +13,7 @@ export const TrendingContext = createContext<ContextProps>(null!)
 
 export const TrendingProvider = ({children}:TrendingContextProps) =>{
 
+    const API_KEY = "8426a1374a213b578abf04fbd0c08f8a"
     const [dayTrending, setDayTrending] = useState<any []>([])
     const [weekTrending, setWeekTrending] = useState<any []>([])
     
@@ -26,8 +27,8 @@ export const TrendingProvider = ({children}:TrendingContextProps) =>{
     }
 
     useEffect(()=>{
-        fetchDayTrending("trending/all/day?api_key=8426a1374a213b578abf04fbd0c08f8a")
-        fetchWeekTrending("trending/all/week?api_key=8426a1374a213b578abf04fbd0c08f8a")
+        fetchDayTrending(`trending/all/day?api_key=${API_KEY}`)
+        fetchWeekTrending(`trending/all/week?api_key=${API_KEY}`)
     },[])
 
     return(

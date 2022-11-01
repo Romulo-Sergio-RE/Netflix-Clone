@@ -15,9 +15,11 @@ export const Container = styled.div`
         flex-direction: row;
         iframe{
             width: 50rem;
-            height: 34.375rem;
+            height: 31.875rem;
             border: none;
             outline: 0.125rem solid #f2f2f2f2;
+            border-radius: 0.3125rem;
+            position:relative;
         }
         .button-close{
             display: flex;

@@ -14,8 +14,8 @@ export const ContainerModal = styled.div`
     position: fixed;
 `; 
 export const Container = styled.div`
-    width: 43.75rem;
-    height: 31.25rem;
+    width: 40.625rem;
+    height: 500px;
     background-color:  rgba(12, 10, 10, 1);
     border-radius: 1.25rem;
     outline: 0.125rem solid #f2f2f2f2;
@@ -24,7 +24,7 @@ export const Container = styled.div`
     justify-content: space-between;
     flex-direction: column;
     .backImage{
-        width: 43.75rem;
+        width: 40.625rem;
         height: 16.875rem;
         border-radius: 1.25rem 1.25rem 0 0;
     }
@@ -49,7 +49,7 @@ export const Container = styled.div`
 
         button{
             width: 7.5rem;
-            height: 2.5rem;
+            height: 2.1875rem;
             margin: 0 0.625rem;
             border-radius: 0.625rem;
             cursor: pointer;

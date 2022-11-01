@@ -36,7 +36,6 @@ export const ModalFavorites: React.FC<modalProps> = (props) =>{
             const data = await getTrailerMovie(id)
             setTrailer(data.results)
             setIsTrailerOpen(!isTrailerOpen)
-            
         }else {
             const data = await getTrailerTvShows(id)
             setTrailer(data.results)

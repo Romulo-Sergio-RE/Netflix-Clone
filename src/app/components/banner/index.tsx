@@ -53,7 +53,7 @@ export const Banner: React.FC<BannerProps> = (props)=>{
                 <h1 className="title">{props.title}{props.name}</h1>
                 <h2 className="ranting">Avaliação: {props.vote_average} / 10</h2>
                 <div className="btns">
-                    <button onClick={()=> WatchTrailer(props.id, props.media_type)} className="bottom">Trailer</button>
+                    
                     <button onClick={()=>{alert("sdasd")}} className="bottom">Know more</button>
                 </div>
                 {props.overview?

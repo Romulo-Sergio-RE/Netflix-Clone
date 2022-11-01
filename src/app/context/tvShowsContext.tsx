@@ -13,6 +13,8 @@ export const TvShowsContext = createContext<ContextProps>(null!)
 
 export const TvShowsProvider = ({children}:TvShowsContextProps) =>{
 
+    const API_KEY = "8426a1374a213b578abf04fbd0c08f8a";
+
     const [topTvShows, setTopTvShows] = useState<any []>([])
     const [popularTvShows, setPopularTvShows] = useState<any []>([])
    
@@ -26,8 +28,8 @@ export const TvShowsProvider = ({children}:TvShowsContextProps) =>{
     }
 
     useEffect(()=>{
-        fetchTopTvShows("tv/popular?api_key=8426a1374a213b578abf04fbd0c08f8a&language=en-US")
-        fetchPopularTvShows("tv/top_rated?api_key=8426a1374a213b578abf04fbd0c08f8a&language=en-US")
+        fetchTopTvShows(`tv/popular?api_key=${API_KEY}&language=en-US`)
+        fetchPopularTvShows(`tv/top_rated?api_key=${API_KEY}&language=en-US`)
     },[])
   
     return(

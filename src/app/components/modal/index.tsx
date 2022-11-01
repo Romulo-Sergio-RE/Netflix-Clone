@@ -26,6 +26,7 @@ export const Modal: React.FC<ModalProps> = (props)=>{
     const AddFavorites = () =>{
         if(favorites.find((favorite)=> favorite.poster_path === props.poster_path)){
             setFavorites(favorites.filter((favorite)=> favorite.poster_path !== props.poster_path))
+            
         }else{
             setFavorites([...favorites, props])
         }

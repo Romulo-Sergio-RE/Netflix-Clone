@@ -37,7 +37,10 @@ export const ContainerBanner = styled.div`
         margin:1.25rem 0 0 0;
     }
     .btns{
-        margin:1.25rem 0 0 0;
+        margin: 1.25rem 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .bottom{
             width: 7.5rem;
             height: 2.813rem;
@@ -48,11 +51,11 @@ export const ContainerBanner = styled.div`
             font-weight: bold;
             text-transform: uppercase;
             border: none;
-            background-color: black;
+            background-color: red;
             color: #ffffff;
+            transition: all 2s;
             :hover{
-                background-color: red;
-                color: #ffffff;
+                transform: scale(1.02);
             }
         }
     }
