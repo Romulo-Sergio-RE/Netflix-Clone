@@ -13,16 +13,19 @@ export const Home = () =>{
     const {popularMovie,topMovie,movieChosen} = useContext(MovieContext)
     const {popularTvShows,topTvShows} = useContext(TvShowsContext)
     const {weekTrending} = useContext(TrendingContext)
-
+    console.log(weekTrending)
+   
     return(
         <ContainerHomePage>
             <Header />
             <Banner 
                 id={movieChosen?.id}
                 title={movieChosen?.title}
+                name={movieChosen?.name}
                 overview={movieChosen?.overview}
                 vote_average={movieChosen?.vote_average}
                 backdrop_path={movieChosen?.backdrop_path}
+                media_type={movieChosen?.media_type}
             />
             <h3>week</h3>
             <Carousel 

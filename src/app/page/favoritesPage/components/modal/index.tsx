@@ -4,6 +4,7 @@ import {AiFillHeart } from "react-icons/ai";
 import { useContext, useState } from "react";
 import { FavoritesContext } from "../../../../context/favoritesContext";
 import { getTrailerMovie, getTrailerTvShows } from "../../../../hooks/trailer";
+import { TrailerMovieAndTvShows } from "../../../../components/trailer";
 interface modalProps {
     id:number
     title:string
@@ -19,7 +20,9 @@ export const ModalFavorites: React.FC<modalProps> = (props) =>{
 
     const image_path = "https://image.tmdb.org/t/p/w500";
     const {favorites,setFavorites}= useContext(FavoritesContext)
-    const [trailer,setTrailer] = useState([])
+    const [trailer,setTrailer] = useState<any []>([])
+    const [isTrailerOpen,setIsTrailerOpen] = useState(false)
+    
 
     const RemoveFavorites = () =>{
         if(favorites.find((favorite)=> favorite.poster_path === props.poster_path)){
@@ -32,14 +35,23 @@ export const ModalFavorites: React.FC<modalProps> = (props) =>{
         if(media_type === "movie"){
             const data = await getTrailerMovie(id)
             setTrailer(data.results)
+            setIsTrailerOpen(!isTrailerOpen)
+            
         }else {
             const data = await getTrailerTvShows(id)
             setTrailer(data.results)
+            setIsTrailerOpen(!isTrailerOpen)
         }
     }
-//https://www.youtube.com/watch?v=
     return(
         <ContainerModal>
+            {isTrailerOpen?
+                <TrailerMovieAndTvShows 
+                    trailerKey={trailer}
+                    closeTrailer={() => setIsTrailerOpen(!isTrailerOpen)}
+                />:null
+            },
+
             <Container>
                 <div className="container-img">
                     <img 
