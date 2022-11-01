@@ -1,5 +1,4 @@
-import { useContext, useState } from "react"
-import { MovieContext } from "../../context/movieContext"
+import { useState } from "react"
 import { Modal } from "../modal"
 import { ContainerCard } from "./styled"
 
@@ -11,6 +10,7 @@ interface cardProps {
     vote_average: string
     media_type: string
     backImage:string
+    id:number
 }
 export const Card: React.FC<cardProps> = (props)=>{
     const image_path = "https://image.tmdb.org/t/p/w500";
@@ -20,12 +20,14 @@ export const Card: React.FC<cardProps> = (props)=>{
         <>
         {isModalOpen?
             <Modal 
+                id={props.id}
                 title={props.title}
                 name={props.name}
                 poster_path={props.imagePoster}
                 overview={props.overview}
                 vote_average={props.vote_average}
                 backImage={props.backImage}
+                media_type={props.media_type}
                 onClose={()=>{setModalOpen(!isModalOpen)}}
             />
             :null

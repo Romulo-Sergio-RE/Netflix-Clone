@@ -10,23 +10,28 @@ export const Favorites = ()=>{
 
     return(
         <Container>
-            <Header />  
-            <ContainerGrid>
-                {
-                    favorites.map((favorite)=>{
-                        return(
-                            <CardFavorite 
-                                name={favorite.name}
-                                title={favorite.title}
-                                poster_path={favorite.poster_path}
-                                overview={favorite.overview}
-                                vote_average={favorite.vote_average}
-                                backImage={favorite.backImage}
-                            />
-                        )
-                    })
-                }
-            </ContainerGrid> 
+            <Header /> 
+            {favorites.length !== 0?
+                <ContainerGrid>
+                    {
+                        favorites.map((favorite)=>{
+                            return(
+                                <CardFavorite 
+                                    id={favorite.id}
+                                    name={favorite.name}
+                                    title={favorite.title}
+                                    poster_path={favorite.poster_path}
+                                    overview={favorite.overview}
+                                    vote_average={favorite.vote_average}
+                                    backImage={favorite.backImage}
+                                    media_type={favorite.media_type}
+                                />
+                            )
+                        })
+                    }
+                </ContainerGrid> 
+                :<h2>Add movies or tv shows to your list</h2>
+            } 
         </Container>
     )
 }

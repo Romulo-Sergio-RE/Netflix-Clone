@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
-interface styledProps{
-    imageBanner:string
-}
-export const ContainerBanner = styled.div<styledProps>`
+export const ContainerBanner = styled.div`
     width: 100%;
     height: 28.125rem;
-    background: url(${(props)=> props.imageBanner}) no-repeat ;
     background-size: cover;
     background-position: center;
     mask-image: linear-gradient(to top, transparent 1%, black 20%);
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    .backImg{
+        width: 100%;
+        height: 28.125rem;
+    }
     .info-movie{
         height: 28.125rem;
         display: flex;
@@ -17,6 +20,7 @@ export const ContainerBanner = styled.div<styledProps>`
         justify-content: center;
         flex-direction: column;
         margin: 0 0 0 1.25rem;
+        position: absolute;
     }
     .title{
         font-size: 2.5rem;

@@ -4,12 +4,14 @@ import {AiFillHeart } from "react-icons/ai";
 import { useContext, useState } from "react";
 import { FavoritesContext } from "../../context/favoritesContext";
 interface ModalProps {
-    poster_path?: string
+    id?:number
     title?: string
     name?: string
+    poster_path?: string
     vote_average: string
     overview: string
     backImage:string
+    media_type:string
     onClose?: ()=> void,
 }
 export const Modal: React.FC<ModalProps> = (props)=>{
@@ -41,7 +43,7 @@ export const Modal: React.FC<ModalProps> = (props)=>{
                     <h4>Avaliacao:{props.vote_average}/10</h4>
                     <p>{truncate(props.overview, 120)}</p>
                     <div className="container-btns">
-                        <button>Saiba Mais</button>
+                        <button>Know More</button>
                         <AiFillHeart 
                             className="button-favorites" 
                             color={

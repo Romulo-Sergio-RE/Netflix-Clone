@@ -26,7 +26,6 @@ export const MovieProvider = ({children}:MovieContextProps) =>{
         setTopMovie(data?.results)  
     }
     const fetchMovieRandom = async () =>{
-        //const filterTvShows = movieLista.filter((shows)=> shows.media_type === "movie")
         const data = await getMovieAndTvShows("movie/top_rated?api_key=8426a1374a213b578abf04fbd0c08f8a&language=pt-BR")
         const movie =  data?.results
         let randomMovie = Math.floor(Math.random() * (movie.length - 1))

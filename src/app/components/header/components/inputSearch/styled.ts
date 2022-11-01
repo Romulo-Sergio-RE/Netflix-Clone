@@ -6,19 +6,18 @@ export const ContainerInput = styled.div`
     justify-content: right;
     flex-direction: row-reverse;
     .container-icon{
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
         background-color: red;
-        border-radius: 1.875rem;
+        border-radius: 0.9375rem;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        border: 0.125rem solid red;
     }
     .icon-menu{
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 1.5rem;
+        height: 1.5rem;
         color: #ffffff;
     }
     .input-search{
@@ -29,6 +28,11 @@ export const ContainerInput = styled.div`
         border-radius: 0.75rem;
         border: 0.063rem solid red;
         padding: 0 0 0 0.625rem;
+        background-color: #252525;
+        color: #f2f2f2;
+        ::placeholder{
+            color: #f2f2f2;
+        }
         :focus{
             outline: none;
             box-shadow: none;

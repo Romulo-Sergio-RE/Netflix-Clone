@@ -10,11 +10,13 @@ export const Header = () =>{
         <ContainerHeader>
             <nav className="container-nav">
                 <div className="logo-menuItens">
-                    <img 
-                        src={require("../../assets/netflix.png")}
-                        alt="icone-netflix"
-                        className="logo"
-                    />
+                    <Link className="link"to={"/"}>
+                        <img 
+                            src={require("../../assets/netflix.png")}
+                            alt="icone-netflix"
+                            className="logo"
+                        />
+                    </Link>
                     <ul className="lista">
                         <li className="lista-itens">
                             <Link className="link"to={"/"}>Home</Link>

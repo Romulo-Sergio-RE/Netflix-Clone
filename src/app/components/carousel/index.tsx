@@ -35,6 +35,7 @@ export const Carousel: React.FC<carouselProps> = (props) =>{
                                     media_type={movie.media_type}
                                     name={movie.name}
                                     backImage={movie.backdrop_path}
+                                    id={movie.id}
                                 />
                             </SwiperSlide>
                         )

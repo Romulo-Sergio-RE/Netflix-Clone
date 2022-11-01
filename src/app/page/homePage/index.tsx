@@ -13,11 +13,12 @@ export const Home = () =>{
     const {popularMovie,topMovie,movieChosen} = useContext(MovieContext)
     const {popularTvShows,topTvShows} = useContext(TvShowsContext)
     const {weekTrending} = useContext(TrendingContext)
-    
+
     return(
         <ContainerHomePage>
             <Header />
             <Banner 
+                id={movieChosen?.id}
                 title={movieChosen?.title}
                 overview={movieChosen?.overview}
                 vote_average={movieChosen?.vote_average}

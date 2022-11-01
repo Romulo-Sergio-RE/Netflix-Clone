@@ -14,9 +14,70 @@ export const ContainerModal = styled.div`
     position: fixed;
 `; 
 export const Container = styled.div`
-    width: 700px;
-    height: 500px;
+    width: 43.75rem;
+    height: 31.25rem;
     background-color:  rgba(12, 10, 10, 1);
     border-radius: 1.25rem;
     outline: 0.125rem solid #f2f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    .backImage{
+        width: 43.75rem;
+        height: 16.875rem;
+        border-radius: 1.25rem 1.25rem 0 0;
+    }
+    .container-img{
+        display: flex;
+        align-items: baseline;
+        flex-direction: row-reverse;
+        .button-close{
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #f2f2f2f2;
+            background-color: red;
+            border-radius: 0.625rem;
+            cursor: pointer;
+            position: absolute;
+            margin: 1.25rem 1.25rem 1.25rem 0;
+        }
+    }
+    .container-btns{
+        display: flex;
+        align-items: flex-start;
+
+        button{
+            width: 7.5rem;
+            height: 2.5rem;
+            margin: 0 0.625rem;
+            border-radius: 0.625rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0 0.625rem 0.9375rem 0;
+            text-transform: uppercase;
+            border: none;
+            background-color: red;
+            color: #ffffff;
+            transition: all 2s;
+            :hover{
+                transform: scale(1.05);
+            }
+        }
+        .button-favorites{
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+            margin: 0.375rem 0 0 0;
+        }
+    }
+    h3{
+        color: #f2f2f2f2;
+        margin: 0.625rem 0 0 0;
+    }
+    p{
+        color: #f2f2f2f2;
+        padding: 0.9375rem;
+    }
 `;  
