@@ -14,7 +14,7 @@ export const MovieContext = createContext<ContextProps>(null!)
 
 export const MovieProvider = ({children}:MovieContextProps) =>{
 
-    const API_KEY = "8426a1374a213b578abf04fbd0c08f8a"
+    const API_KEY = ""
 
     const [topMovie, setTopMovie] = useState<any []>([])
     const [popularMovie, setPopularMovie] = useState<any []>([])

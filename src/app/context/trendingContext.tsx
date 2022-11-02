@@ -13,7 +13,7 @@ export const TrendingContext = createContext<ContextProps>(null!)
 
 export const TrendingProvider = ({children}:TrendingContextProps) =>{
 
-    const API_KEY = "8426a1374a213b578abf04fbd0c08f8a"
+    const API_KEY = ""
     const [dayTrending, setDayTrending] = useState<any []>([])
     const [weekTrending, setWeekTrending] = useState<any []>([])
     

@@ -13,7 +13,7 @@ export const TvShowsContext = createContext<ContextProps>(null!)
 
 export const TvShowsProvider = ({children}:TvShowsContextProps) =>{
 
-    const API_KEY = "8426a1374a213b578abf04fbd0c08f8a";
+    const API_KEY = "";
 
     const [topTvShows, setTopTvShows] = useState<any []>([])
     const [popularTvShows, setPopularTvShows] = useState<any []>([])

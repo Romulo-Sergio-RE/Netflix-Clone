@@ -1,4 +1,4 @@
-const API_KEY = "8426a1374a213b578abf04fbd0c08f8a";
+const API_KEY = "";
 
 export const getTrailerMovie = async (movie_id: any) =>{
     try{
