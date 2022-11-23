@@ -13,4 +13,5 @@ O projeto foi criado com a ideia de clonar o Netflix para melhorar as práticas 
     - React.js
 
 ## Video do Projeto
+https://user-images.githubusercontent.com/89258510/203562063-2c60f410-9426-4ee4-bc0f-02efe01c1298.mp4
 
